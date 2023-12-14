@@ -30,7 +30,7 @@ cd "$tarball_dir"
 # Unpack and install apr
 tar -xf apr-1.7.4.tar.gz
 cd apr-1.7.4
-./configure --prefix="$prefix"
+./configure --prefix="$prefix/apr"
 make
 make install
 cd ..
@@ -38,7 +38,7 @@ cd ..
 # Unpack and install apr-util
 tar -xf apr-util-1.6.3.tar.gz
 cd apr-util-1.6.3
-./configure --prefix="$prefix" --with-apr="$prefix/apr"
+./configure --prefix="$prefix/apr-util" --with-apr="$prefix/apr"
 make
 make install
 cd ..
@@ -46,7 +46,7 @@ cd ..
 # Unpack and install pcre
 tar -xf pcre-8.45.tar.gz
 cd pcre-8.45
-./configure --prefix="$prefix"
+./configure --prefix="$prefix/pcre"
 make
 make install
 cd ..
@@ -54,7 +54,7 @@ cd ..
 # Unpack and install openssl
 tar -xf openssl-3.2.0.tar.gz
 cd openssl-3.2.0
-./config -fPIC --prefix="$prefix"
+./config -fPIC --prefix="$prefix/openssl"
 make
 make install
 cd ..
@@ -62,7 +62,7 @@ cd ..
 # Unpack and install pcre2
 tar -xf pcre2-10.42.tar.gz
 cd pcre2-10.42
-./configure --prefix="$prefix"
+./configure --prefix="$prefix/pcre2"
 make
 make install
 cd ..
@@ -70,7 +70,7 @@ cd ..
 # Unpack and install httpd
 tar -xf httpd-2.4.58.tar.gz
 cd httpd-2.4.58
-./configure --prefix="$prefix" --with-apr="$prefix/apr" --with-apr-util="$prefix/apr-util" --with-pcre="$prefix/bin/pcre2-config" --with-ssl="$prefix/openssl"
+./configure --prefix="$prefix" --with-apr="$prefix/apr" --with-apr-util="$prefix/apr-util" --with-pcre="$prefix/pcre2/bin/pcre2-config" --with-ssl="$prefix/openssl"
 make
 make install
 cd ..
