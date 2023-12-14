@@ -9,7 +9,7 @@ prefix="/APPS/Apache2458"
 tarball_dir="/opt/tarball"
 
 # Install priority dependencies
-sudo yum groupinstall development tools -y
+sudo yum groupinstall "development tools" -y
 sudo yum install wget expat expat-devel -y
 sudo yum install perl-CPAN -y
 
