@@ -5,7 +5,7 @@
 # Date: 14 December 2023
 
 # Define installation prefix and tarball directory
-prefix="/APPS/Apache2458"
+prefix="/apps/apache2458"
 tarball_dir="/opt/tarball"
 
 # Install priority dependencies
